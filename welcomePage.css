@@ -11,13 +11,13 @@
 
 #signUp {
   position: relative;
-  width: 93px;
-  height: 40px;
+  width: clamp(70px,1vw,93px) ;
+  height: clamp(35px,1vw,40px);
   top: 50%;
   margin-top: -20px;
   border-radius: 25px;
   margin-right: -39px;
-  font-size: 16px;
+  font-size: clamp(12px,1%,16px);
   line-height: 1.5;
   z-index: 5;
   background-color: #006699;
@@ -29,18 +29,18 @@
 
 #logIn {
   position: relative;
-  width: 112px;
-  height: 40px;
+  width: clamp(100px,1vw,112px);
+  height: clamp(35px,1vw,40px);
   top: 50%;
   margin-top: -20px;
   background-color: #15c4ff;
   color: #ffffff;
   border-radius: 25px;
-  padding-left: 39px;
-  font-size: 16px;
+  padding-left: clamp(45px,5%,39px);
+  font-size: clamp(12px,1%,16px);
   line-height: 1.5;
   z-index: 4;
-  padding: 5% 0 5% 30%;
+  padding-top: 5%;
   cursor: pointer;
 
 }
@@ -52,7 +52,7 @@
 }
 
 main {
-  height: 1000px;
+  height: clamp(300px,5%,1000px);
 }
 
 header {
@@ -102,7 +102,7 @@ button {
 }
 
 .section1 {
-  height: 600px;
+  height: clamp(400px,10%,600px);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -117,8 +117,8 @@ button {
 }
 
 .section1 p {
-  font-size: 22px;
-  width: 719px;
+  font-size: clamp(16px,1%,22px);
+  width: clamp(400px,5%,719px);
   flex-shrink: 0;
   color: rgb(0, 0, 0);
   text-align: center;
@@ -141,7 +141,7 @@ button {
 
 .section2 p {
   text-align: center;
-  font-size: 20px;
+  font-size: clamp(16,1%,20px);
 }
 
 .section2conCon {
@@ -170,8 +170,8 @@ button {
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: stretch;
+  align-items: stretch;
   margin-top: 10px;
   background-color: #003466;
   height: max-content;
