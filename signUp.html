@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signUp.css">
+    <script src="signUp.js" defer></script>
+    <title>Sign up</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="containerImg">
+            <img src="imgs/Rectangle16.svg" alt="a photo of doctors on a surgery">
+        </div>
+        <div id="container2">
+            <div class="logoContainer">
+                <img src="imgs/logo.svg" alt="" class="logoImg">
+                <h1 class="logo">university Care System</h1>
+            </div>
+            <div id="signUpFormContainer">
+                <p id="heading">Sign UP</p>
+                <div id="formTypeContainer">
+                    <button id="formTypeBtn1" class="formTypeBtn" value="doctor">doctor</button>
+                    <button id="formTypeBtn2" class="formTypeBtn hover" value="student">student</button>
+                </div>
+                <form action="#" id="signUpForm">
+                    <input type="text" class="containerInputs" placeholder="First name" required>
+                    <input type="text" class="containerInputs" placeholder="Last name" required>
+                    <input type="tel" class="containerInputs" name="Phone Number" pattern="[0-9]{11}" required
+                        placeholder="Phone Number">
+                    <input type="email" class="containerInputs" placeholder="example@gmail.com" required>
+                    <input type="password" class="containerInputs" placeholder="Password" required>
+                    <input type="text" class="hidden containerInputs" id="drId" placeholder="Doctor ID" required>
+                    <input type="submit" id="submitBtn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

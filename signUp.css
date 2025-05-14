@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Dangrek&family=Honk&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&family=Winky+Sans:ital,wght@0,396;1,396&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+:root {
+  --text-color: #E0E8F7;
+  --subheading-color: #003366;
+  --placeholder-color: #888c94;
+  --primary-color: #E0E8F7;
+  --secondary-color: #003366;
+  --secondary-hover-color: #012549;
+  --scrollbar-color: #E0E8F7;
+}
+
+#container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  background: #3989D4;
+}
+
+#containerImg {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#containerImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#container2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logoImg {
+  width: 4.09288rem;
+  height: 7.3125rem;
+  aspect-ratio: 65.49/117.00;
+}
+
+.logo {
+  color: #FFF;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 25%;
+  padding: 10% 0%;
+  font-size: 1.5rem;
+}
+
+
+#signUpFormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #012549;
+  border-radius: 80px 80px 0px 0px;
+  padding: 6% 0%;
+
+}
+
+#signUpForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 6% 0;
+
+}
+
+#heading {
+  font-size: xx-large;
+  color: var(--primary-color);
+  padding-bottom: 2rem;
+
+}
+
+#formTypeContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.formTypeBtn {
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid var(--primary-color);
+  border-left: none;
+  padding: 10% 30% 3%;
+  border-radius: 5px 5px 0px 0px;
+  background: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: large;
+
+}
+
+.formTypeBtn:hover {
+  color: rgb(255, 255, 255);
+  transform: translateY(-5px);
+
+
+}
+
+.hover {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.containerInputs {
+  padding: 1% 10%;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  font-size: medium;
+}
+
+#submitBtn {
+  padding: 1% 10%;
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+  background: #1b6bbb;
+  color: var(--primary-color);
+  cursor: pointer;
+
+}
+
+#submitBtn:hover {
+  background: var(--secondary-color);
+}
+
+@media (max-width:1049px) {
+  * {
+    height: auto;
+    width: auto;
+  }
+
+  #containerImg {
+    width: 50%;
+    height: 200%;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width:620px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  #containerImg,
+  #containerImg img {
+    display: none;
+  }
+
+  #signUpFormContainer,
+  #container2 {
+    height: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .signup-box {
+    height: 250px;
+    order: -1;
+  }
+
+  .signup-box img {
+    height: 100%;
+  }
+
+  .login-box {
+    padding: 30px 20px;
+    align-items: center;
+  }
+
+  form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 30px;
+  }
+
+  .logo h2 {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  label,
+  input,
+  button {
+    font-size: 13px;
+  }
+
+  button[type="submit"] {
+    padding: 8px;
+  }
+}

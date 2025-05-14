@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="logIn.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Left Side - Login Form -->
+    <div class="login-box">
+      <div class="logo">
+        <img src="imgs/logo.svg" alt="Logo" />
+        <h2>University Care System</h2>
+      </div>
+      <h3>Log In</h3>
+      <form id="loginForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Account name" required />
+
+        <label for="password">Password</label>
+        <div class="password-container">
+          <input type="password" id="password" placeholder="Password" required />
+          <span id="togglePassword">
+            <i class="fa-solid fa-eye-slash"></i>
+          </span>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Right Side - Image -->
+    <div class="signup-box">
+      <img src="imgs/Rectangle14.svg" alt="Radiologist" />
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+
+</html>
