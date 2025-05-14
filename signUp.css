@@ -156,7 +156,14 @@
   border-radius: 5px;
   font-size: medium;
 }
-
+input[type="email"]:valid {
+  border-color: green;
+  box-shadow: 0 0 8px green;
+ }
+ input[type="email"]:invalid:not(:placeholder-shown) {
+  border-color: red;
+  box-shadow: 0 0 8px red;
+ }
 #submitBtn {
   padding: 1% 10%;
   border-radius: 10px;
