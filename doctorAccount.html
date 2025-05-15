@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="doctorAccount.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=border_color" />
-    <title>Doctor account</title>
+    <title>doctor account</title>
     <script src="doctorAccount.js" defer></script>
 </head>
 
@@ -17,7 +17,16 @@
             <img src="imgs/logo.svg" alt="" class="logoImg">
             <p class="logo">university Care System</p>
         </div>
-        <nav>
+        <nav id="mainnav">
+            <ul>
+                <li><a href="homePagedoctor.html">Home</a></li>
+                <li><a href="">My reports</a></li>
+                <li><a href="chatBot.html">FaQ Bot</a></li>
+                <li><a href="doctorAccount.html">My profile</a></li>
+            </ul>
+        </nav>
+        <button onclick="window.location.href='welcomePage.html'" class="logOut">Log Out</button>
+        <nav id="mobnav">
             <ul>
                 <li><a href="homePageDoctor.html">Home</a></li>
                 <li><a href="">My reports</a></li>
@@ -25,7 +34,6 @@
                 <li><a href="doctorAccount.html">My profile</a></li>
             </ul>
         </nav>
-        <button onclick="window.location.href='welcomePage.html'" class="logOut">Log Out</button>
     </header>
     <main>
         <section class="detailsContainer">
@@ -36,11 +44,12 @@
 
             <div class="doctorContainer">
                 <div class="doctorDetailsContainer">
-                    <img id="img" src="imgs/1.jpg" alt="">
+                    <img id="img" src="imgs/3.png" alt="">
                     <div class="doctorDetails">
                         <p>jseka wardy</p>
+                        <p>doctor</p>
                         <p>Egypt ,Cairo ,Korba</p>
-                        <p>Faculty of computer science </p>
+                        <p>Suez canal university </p>
                     </div>
                 </div>
             </div>

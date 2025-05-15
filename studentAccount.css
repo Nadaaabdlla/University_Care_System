@@ -46,6 +46,8 @@ main {
   height: 48.625rem;
   flex-shrink: 0;
   background: #ffffff;
+  height: fit-content;
+
 }
 
 section {
@@ -109,7 +111,6 @@ span {
   font-size: 1.25rem;
   font-weight: 700;
 }
-
 /*heading and nav bar list styling */
 ul {
   list-style: none;
@@ -175,11 +176,13 @@ a {
 
 .studentDetailsContainer {
   display: flex;
-  gap: 5rem;
-  width: 50%;
+  padding:0 3%;
+  gap: 3rem;
+  width: fit-content;
 }
 
 .studentDetails {
+    font-size: 20px;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -187,9 +190,8 @@ a {
 }
 
 img {
-  margin-left: 10px;
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 15rem;
   flex-shrink: 0;
   border-radius: 50%;
 }
@@ -293,12 +295,17 @@ footer {
   padding: 1rem;
   width: 100%;
 }
-
-@media (max-width: 1200px) {
+#mobnav{
+    display: none;
+}
+@media (max-width: 1200px) {   
   main {
     max-width: 90%;
+    height: auto;
   }
-
+ul{
+    gap: 0;
+}
   .headBtnContainer {
     max-width: 70%;
   }
@@ -349,12 +356,7 @@ footer {
   section {
     margin: 0;
   }
-  nav {
-    width: max-content;
-    gap: 1.5rem;
-    justify-content: space-around;
-  }
-
+  
   ul {
     justify-content: center;
     width: fit-content;
@@ -392,6 +394,7 @@ footer {
   .studentDetails {
     gap: 0.5rem;
     width: 100%;
+    font-size: 16px;
   }
 
   /*personal information styling for tablet */
@@ -468,6 +471,7 @@ footer {
   header {
     padding: 10px;
     margin-top: 0;
+    flex-wrap: wrap;
   }
 
   /* header styling for mobile */
@@ -479,10 +483,12 @@ footer {
     width: 9rem;
     font-size: 1rem;
   }
-  header nav {
+  #mainnav {
     display: none;
   }
-
+ #mobnav{
+    display: flex;
+ }
   .logOut {
     font-size: 0.8rem;
     width: 5rem;
