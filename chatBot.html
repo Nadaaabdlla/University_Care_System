@@ -12,21 +12,29 @@
 </head>
 
 <body>
-  <header id="header">
+  <div id="header">
     <div class="logoContainer">
       <img src="imgs/logo.svg" alt="" class="logoImg">
       <p class="logo">university Care System</p>
     </div>
-    <nav>
+    <nav id="mainnav">
       <ul>
-        <li><a href="homePageStudent.html">Home</a></li>
-        <li><a href="">My Health</a></li>
-        <li><a href="chatBot.html">FaQ Bot</a></li>
-        <li><a href="studentAccount.html">My profile</a></li>
+          <li><a href="homePagestudent.html">Home</a></li>
+          <li><a href="">My reports</a></li>
+          <li><a href="chatBot.html">FaQ Bot</a></li>
+          <li><a href="studentAccount.html">My profile</a></li>
       </ul>
-    </nav>
-    <button onclick="window.location.href='welcomePage.html'" class="logOut">Log Out</button>
-  </header>
+  </nav>
+  <button onclick="window.location.href='welcomePage.html'" class="logOut">Log Out</button>
+  <nav id="mobnav">
+      <ul>
+          <li><a href="homePagestudent.html">Home</a></li>
+          <li><a href="">My reports</a></li>
+          <li><a href="chatBot.html">FaQ Bot</a></li>
+          <li><a href="studentAccount.html">My profile</a></li>
+      </ul>
+  </nav>
+</div>
   <div class="container">
     <!-- App Header -->
     <header class="app-header">
