@@ -8,14 +8,11 @@
   font-style: normal;
   line-height: normal;
 }
-
 /* main and general parts styling */
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  /* background-color: #003466; */
   width: 100%;
   height: 100%;
 }
@@ -45,16 +42,20 @@ main {
   height: 48.625rem;
   flex-shrink: 0;
   background: #ffffff;
-  height: fit-content;
-}
-
-section {
-  margin-left: 3rem;
 }
 
 footer {
   background-color: #003466;
   height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 80px;
+    background-color: #003466;
+    color: white;
+    padding: 1rem;
+    width: 100%;
 }
 
 .t h2 {
@@ -62,13 +63,6 @@ footer {
   font-size: 2rem;
   font-weight: 500;
 }
-
-.personalContainer h2 {
-  color: #000000;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
 input {
   display: flex;
   width: 20.4375rem;
@@ -151,7 +145,6 @@ a {
   border-style: solid;
   border-color: #000;
   color: #000;
-  
 }
 
 /* doctor profile styling */
@@ -207,93 +200,11 @@ img {
   background: none;
   cursor: pointer;
 }
-
-/* personal information container styling */
-.personalContainer {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  color: white;
-}
-
-.headBtnContainer {
-  display: flex;
-  justify-content: space-between;
-  width: 55%;
-}
-
-.detailsEdit {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0.5rem;
-  padding: 2rem;
-}
-
-.inputContainer {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  width: 100%;
-  margin: 0.2rem 0;
-}
-
-.detailsEditContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  border-radius: 1.25rem;
-  background: #003466;
-  width: 90%;
-  margin-left: 2rem;
-}
-
-.apply {
-  display: flex;
-  width: 30.4375rem;
-  height: 3.375rem;
-  padding: 0.5625rem 7.1875rem;
-  justify-content: center;
-  align-items: center;
-  align-self: flex-end;
-  gap: 0.625rem;
-  flex-shrink: 0;
-  border-radius: 1.25rem;
-  background: #0099cc;
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 500;
-  border-color: #fff;
-  border-style: solid;
-  cursor: pointer;
-}
-
-.apply:hover {
-  background: #006699;
-}
-
 .edit2 {
   align-self: flex-end;
   width: 8.8%;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 80px;
-  background-color: #003466;
-  height: max-content;
-  color: white;
-  padding: 1rem;
-  width: 100%;
-}
 #mobnav{
     display: none;
 }
@@ -397,7 +308,6 @@ ul{
   }
 
   /*personal information styling for tablet */
-  .personalContainer,
   .headBtnContainer,
   .detailsEditContainer,
   .detailsEdit,
@@ -417,16 +327,6 @@ ul{
     margin-left: 0;
     margin-right: 0;
   }
-
-  .apply {
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    padding: 0;
-    width: 50%;
-    margin-left: 0.6rem;
-  }
-
   .edit {
     margin-top: 1rem;
     width: fit-content;
@@ -510,38 +410,6 @@ ul{
     margin-left: 0.6rem;
     margin-right: 0.6rem;
   }
-
-  /*personal information styling for mobile */
-  .personalContainer,
-  .headBtnContainer,
-  .detailsEditContainer,
-  .detailsEdit,
-  .inputContainer {
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    padding: 0;
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .detailsEdit {
-    padding: 1rem 0.7rem;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .apply {
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    padding: 0;
-    width: 50%;
-    margin-left: 0.6rem;
-  }
-
   .edit {
     margin-top: 1rem;
     width: fit-content;
