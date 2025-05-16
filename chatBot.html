@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,22 +20,22 @@
     </div>
     <nav id="mainnav">
       <ul>
-          <li><a href="homePagestudent.html">Home</a></li>
-          <li><a href="">My reports</a></li>
-          <li><a href="chatBot.html">FaQ Bot</a></li>
-          <li><a href="studentAccount.html">My profile</a></li>
+        <li><a href="homePagestudent.html">Home</a></li>
+        <li><a href="">My health</a></li>
+        <li><a href="chatBot.html">FaQ Bot</a></li>
+        <li><a href="studentAccount.html">My profile</a></li>
       </ul>
-  </nav>
-  <button onclick="window.location.href='index.html'" class="logOut">Log Out</button>
-  <nav id="mobnav">
+    </nav>
+    <button onclick="window.location.href='index.html'" class="logOut">Log Out</button>
+    <nav id="mobnav">
       <ul>
-          <li><a href="homePagestudent.html">Home</a></li>
-          <li><a href="">My reports</a></li>
-          <li><a href="chatBot.html">FaQ Bot</a></li>
-          <li><a href="studentAccount.html">My profile</a></li>
+        <li><a href="homePagestudent.html">Home</a></li>
+        <li><a href="">My reports</a></li>
+        <li><a href="chatBot.html">FaQ Bot</a></li>
+        <li><a href="studentAccount.html">My profile</a></li>
       </ul>
-  </nav>
-</div>
+    </nav>
+  </div>
   <div class="container">
     <!-- App Header -->
     <header class="app-header">
@@ -44,21 +45,21 @@
 
     <!-- Suggestions List -->
     <ul class="suggestions">
+      <li class="xray-suggestion" id="xray-upload-btn">
+        <p class="text">Upload an X-ray image for analysis</p>
+        <span class="icon material-symbols-rounded">medical_information</span>
+      </li>     
       <li class="suggestions-item">
         <p class="text">what causes pneumonia</p>
-        <span class="icon material-symbols-rounded">draw</span>
+        <span class="icon material-symbols-rounded">coronavirus</span>
       </li>
       <li class="suggestions-item">
         <p class="text">How can I treat with pneumonia</p>
-        <span class="icon material-symbols-rounded">lightbulb</span>
-      </li>
-      <li class="suggestions-item">
-        <p class="text">Suggest some useful things for health care.</p>
-        <span class="icon material-symbols-rounded">explore</span>
-      </li>
+        <span class="icon material-symbols-rounded">medication</span>
+      </li> 
       <li class="suggestions-item">
         <p class="text">vitamins list and where I can get them.</p>
-        <span class="icon material-symbols-rounded">code_blocks</span>
+        <span class="icon material-symbols-rounded">nutrition</span>
       </li>
     </ul>
 
@@ -68,7 +69,7 @@
     <div class="prompt-container">
       <div class="prompt-wrapper">
         <form action="#" class="prompt-form">
-          <input type="text" placeholder="Ask Gemini" class="prompt-input" required />
+          <input type="text" placeholder="Ask our bot" class="prompt-input" required />
           <div class="prompt-actions">
             <!-- File Upload Wrapper -->
             <div class="file-upload-wrapper">
@@ -90,7 +91,7 @@
         <button id="delete-chats-btn" class="material-symbols-rounded">delete</button>
       </div>
 
-      <p class="disclaimer-text">Gemini can make mistakes, so double-check it.</p>
+      <p class="disclaimer-text">please check your health page regularly.</p>
     </div>
   </div>
 

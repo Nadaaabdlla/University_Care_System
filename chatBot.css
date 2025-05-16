@@ -174,7 +174,7 @@ body.chats-active .container :where(.app-header, .suggestions) {
   display: none;
 }
 
-.suggestions .suggestions-item {
+.suggestions .suggestions-item ,.xray-suggestion {
   cursor: pointer;
   padding: 18px;
   width: 228px;
@@ -192,12 +192,14 @@ body.chats-active .container :where(.app-header, .suggestions) {
 .suggestions .suggestions-item:hover {
   background: var(--secondary-hover-color);
 }
-
-.suggestions .suggestions-item .text {
+.xray-suggestion:hover {
+  background: var(--secondary-hover-color);
+}
+.suggestions .suggestions-item .text ,.xray-suggestion .text {
   font-size: 1.1rem;
 }
 
-.suggestions .suggestions-item .icon {
+.suggestions .suggestions-item .icon ,.xray-suggestion .icon{
   width: 45px;
   height: 45px;
   display: flex;
@@ -210,17 +212,27 @@ body.chats-active .container :where(.app-header, .suggestions) {
   color: #1d7efd;
   background: var(--primary-color);
 }
+#xray-upload-btn .icon {
+  color: #6a1b9a; /* بنفسجي للأشعة */
+}
+.suggestions .suggestions-item .icon {
+  background: var(--primary-color);
+}
+
+.suggestions .suggestions-item:nth-child(1) .icon {
+  color: #d32f2f; /* أحمر للفيروس */
+}
 
 .suggestions .suggestions-item:nth-child(2) .icon {
-  color: #28a745;
+  color: #388e3c; /* أخضر للدواء */
 }
 
 .suggestions .suggestions-item:nth-child(3) .icon {
-  color: #ffc107;
+  color: #f57c00; /* برتقالي للراحة */
 }
 
 .suggestions .suggestions-item:nth-child(4) .icon {
-  color: #6f42c1;
+  color: #0288d1; /* أزرق للفيتامينات */
 }
 
 .container .chats-container {
