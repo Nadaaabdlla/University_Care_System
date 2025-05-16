@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --text-color: #E0E8F7;
+  --subheading-color: #003366;
+  --placeholder-color: #888c94;
+  --primary-color: #E0E8F7;
+  --secondary-color: #003366;
+  --secondary-hover-color: #012549;
+  --scrollbar-color: #E0E8F7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #3989D4;
+  flex-direction: row-reverse;
+}
+
+#containerImg {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+#containerImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#container2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #012549;
+  padding: 3rem 2rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.logoImg {
+  width: 60px;
+  height: 90px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+#signUpFormContainer {
+  width: 100%;
+  max-width: 400px;
+}
+
+#signUpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+#heading {
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#formTypeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.formTypeBtn {
+  background: none;
+  color: var(--primary-color);
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.formTypeBtn:hover {
+  transform: translateY(-3px);
+}
+.hover {
+  background: #ffffff;
+  color: #000;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+.containerInputs {
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  font-size: 1rem;
+  color: #000;
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+}
+
+input[type="email"]:valid {
+  border-color: green;
+  box-shadow: 0 0 8px green;
+}
+
+input[type="email"]:invalid:not(:placeholder-shown) {
+  border-color: red;
+  box-shadow: 0 0 8px red;
+}
+
+#submitBtn {
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: #1b6bbb;
+  color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#submitBtn:hover {
+  background: var(--secondary-color);
+}
+
+/* ========== Responsive Design ========== */
+
+@media (max-width: 992px) {
+  #container {
+    flex-direction: column;
+  }
+
+  #containerImg {
+    height: 40vh;
+  }
+
+  #container2 {
+    height: 60vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  #containerImg {
+    display: none;
+  }
+
+  #container2 {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  #signUpFormContainer {
+    width: 100%;
+  }
+}

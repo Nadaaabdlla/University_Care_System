@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studentReport.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=border_color" />
+        <link rel="icon" type="image/x-icon" href="imgs/logo.svg">
+        <title>student health</title>
+    <script src="studentAccount.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logoContainer">
+            <img src="imgs/logo.svg" alt="" class="logoImg">
+            <p class="logo">university Care System</p>
+        </div>
+        <nav id="mainnav">
+            <ul>
+                <li><a href="homePagestudent.html">Home</a></li>
+                <li><a href="studentReport.html">My health</a></li>
+                <li><a href="chatBot.html">FaQ Bot</a></li>
+                <li><a href="studentAccount.html">My profile</a></li>
+            </ul>
+        </nav>
+        <button onclick="window.location.href='index.html'" class="logOut">Log Out</button>
+        <nav id="mobnav">
+            <ul>
+                <li><a href="homePagestudent.html">Home</a></li>
+                <li><a href="studentReport.html">My health</a></li>
+                <li><a href="chatBot.html">FaQ Bot</a></li>
+                <li><a href="studentAccount.html">My profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="detailsContainer">
+            <div class="t">
+                <h2>My health report</h2>
+            </div>
+
+            <div class="studentContainer">
+                <div class="studentDetailsContainer">
+                    <img id="img" class="hidden" src="" alt="">
+                    <div class="studentDetails">
+                        <p>no reports yet</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>&copy;copyright university care system</p>
+        <nav>
+            <ul>
+                <li><a href="">Email</a></li>
+                <li><a href="">Phone number</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
