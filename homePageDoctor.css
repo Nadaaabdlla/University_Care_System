@@ -97,27 +97,30 @@ header {
 
 .section2conCon {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-}
-
-.section2con {
+    width: 80%;
+  }
+  
+  .section2con {
     display: flex;
-    flex-direction: column;
     gap: 1.5rem;
     border: 2px solid #003366;
     border-radius: 10px;
     padding: 1rem;
     cursor: pointer;
-}
+  }
+  
 
 .section2con:hover {
     transform: translateY(-5px);
     box-shadow: 5px 5px 10px 3px #0033667c;
 }
-
+span{
+    vertical-align: bottom;
+  }
 footer {
     background-color: #003466;
     color: white;

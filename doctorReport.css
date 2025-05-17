@@ -39,7 +39,7 @@ main {
   padding: 2rem;
   gap: 2rem;
   width: 75.5rem;
-  height: 48.625rem;
+  height: auto;
   flex-shrink: 0;
   background: #ffffff;
 }
@@ -146,6 +146,33 @@ a {
   border-color: #000;
   color: #000;
 }
+.edit-btn {
+  margin-top: 10px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: #1565c0;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
 
 /* doctor profile styling */
 .detailsContainer {
@@ -162,12 +189,16 @@ a {
 
 .studentContainer {
   display: flex;
+  flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  height: fit-content;
+  padding: 1rem 3rem;
 }
 
 .illStudentContainer,.goodStudentContainer {
   display: flex;
+    flex-direction: column;
   padding:0 3%;
   gap: 3rem;
   width: fit-content;

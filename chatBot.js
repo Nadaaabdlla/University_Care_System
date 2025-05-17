@@ -190,8 +190,11 @@ promptForm.querySelector("#add-file-btn").addEventListener("click", () => fileIn
 
 // ====== تحليل صورة أشعة ======
 const xraySuggestion = document.querySelector("#xray-upload-btn");
+
 xraySuggestion.addEventListener("click", () => {
+  // أخفي باقي عناصر الواجهة
   document.body.classList.add("chats-active", "bot-responding");
+
   const input = document.createElement("input");
   input.type = "file";
   input.accept = "image/*";
@@ -206,50 +209,55 @@ xraySuggestion.addEventListener("click", () => {
     reader.onload = async (e) => {
       const base64String = e.target.result.split(",")[1];
 
+      // ✨ رسالة المستخدم التي ستُرسل إلى Gemini
       const userMsgHTML = `
-        <p class="message-text">X-ray uploaded, analysis underway...</p>
+        <p class="message-text">Here's my X-ray image. Please analyze it.</p>
         <img src="${e.target.result}" class="img-attachment" />
       `;
       const userMsgDiv = createMessageElement(userMsgHTML, "user-message");
       chatsContainer.appendChild(userMsgDiv);
       scrollToBottom();
 
-      const botMsgHTML = `<img class="avatar" src="imgs/botImg.jpeg" /> <p class="message-text">🔍 X-ray image being analyzed</p>`;
+      // ✨ رسالة تحميل للـ bot
+      const botMsgHTML = `
+        <img class="avatar" src="imgs/botImg.jpeg" />
+        <p class="message-text">Analyzing X-ray image with Gemini... 🔍</p>
+      `;
       const botMsgDiv = createMessageElement(botMsgHTML, "bot-message", "loading");
       chatsContainer.appendChild(botMsgDiv);
       scrollToBottom();
 
+      // إرسال الصورة إلى Gemini
       try {
-        const formData = new FormData();
-        formData.append("image", file);
+        const requestBody = {
+          contents: [
+            {
+              role: "user",
+              parts: [
+                { text: "This is a chest X-ray image. Please analyze it and tell me if there are any signs of pneumonia or other conditions." },
+                {
+                  inline_data: {
+                    mime_type: file.type,
+                    data: base64String,
+                  }
+                }
+              ]
+            }
+          ]
+        };
 
-        const response = await fetch("http://YOUR_MODEL_API_URL/predict", {
+        const response = await fetch(API_URL, {
           method: "POST",
-          body: formData,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(requestBody)
         });
 
         const data = await response.json();
-        const resultText = data.prediction || "✅ Analysis completed successfully";
+        const responseText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response from Gemini.";
 
-        // إرسال النتيجة إلى الباك اند للتخزين
-        try {
-          await fetch("http://YOUR_BACKEND_URL/save-report", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              userId: "student_123",
-              result: resultText,
-              timestamp: new Date().toISOString(),
-              imageName: file.name,
-            }),
-          });
-        } catch (saveError) {
-          console.error("Failed to save result:", saveError);
-        }
-
-        typingEffect(resultText, botMsgDiv.querySelector(".message-text"), botMsgDiv);
+        typingEffect(responseText, botMsgDiv.querySelector(".message-text"), botMsgDiv);
       } catch (error) {
-        botMsgDiv.querySelector(".message-text").textContent = "❌ Failed to analyze image.";
+        botMsgDiv.querySelector(".message-text").textContent = "❌ Failed to analyze image with Gemini.";
         botMsgDiv.classList.remove("loading");
         document.body.classList.remove("bot-responding");
         scrollToBottom();

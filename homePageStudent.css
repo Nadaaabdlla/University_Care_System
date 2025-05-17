@@ -104,15 +104,15 @@ button {
 
 .section2conCon {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  width: 80%;
 }
 
 .section2con {
   display: flex;
-  flex-direction: column;
   gap: 1.5rem;
   border: 2px solid #003366;
   border-radius: 10px;
@@ -131,7 +131,9 @@ footer {
   padding: 1rem;
   width: 100%;
 }
-
+span{
+  vertical-align: bottom;
+}
 ul {
   list-style: none;
   display: flex;
