@@ -160,20 +160,20 @@ a {
   padding: 0 0 15px;
 }
 
-.doctorContainer {
+.studentContainer {
   display: flex;
   gap: 0.5rem;
   width: 100%;
 }
 
-.doctorDetailsContainer {
+.illStudentContainer,.goodStudentContainer {
   display: flex;
   padding:0 3%;
   gap: 3rem;
   width: fit-content;
 }
 
-.doctorDetails {
+.illStudentDetails,.goodStudentDetails {
     font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -181,12 +181,12 @@ a {
   justify-content: center;
 }
 
-img {
+/* img {
   width: 15rem;
   height: 15rem;
   flex-shrink: 0;
   border-radius: 50%;
-}
+} */
 
 .edit {
   display: flex;
@@ -208,6 +208,47 @@ img {
 #mobnav{
     display: none;
 }
+.studentCard.errorCard {
+  background-color: #fbe9e7;
+  border-left: 6px solid #e53935;
+}
+
+.error-msg {
+  background-color: #ffe0e0;
+  border: 1px solid #d32f2f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.studentCard {
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.studentCard h3 {
+  margin: 0 0 10px;
+}
+
+.studentCard p.result {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.studentCard.good {
+  border-left: 6px solid #2e7d32; /* أخضر */
+  background-color: #e8f5e9;
+}
+
+.studentCard.ill {
+  border-left: 6px solid #c62828; /* أحمر */
+  background-color: #ffebee;
+}
+
 @media (max-width: 1200px) {   
   main {
     max-width: 90%;
@@ -296,12 +337,12 @@ ul{
     border-radius: 1.25rem;
   }
 
-  /* doctor profile styling for tablet */
-  .doctorDetailsContainer {
+  /*styling for tablet */
+  .illStudentContainer ,.goodStudentContainer {
     width: max-content;
   }
 
-  .doctorDetails {
+  .illStudentDetails,.goodStudentDetails {
     gap: 0.5rem;
     width: 100%;
     font-size: 16px;
@@ -398,9 +439,11 @@ ul{
 
   /* doctor profile styling for mobile */
   .detailsContainer,
-  .doctorContainer,
-  .doctorDetailsContainer,
-  .doctorDetails {
+  .studentContainer,
+  .illStudentContainer,
+  .goodStudentContainer,
+  .illStudentDetails,
+  .goodStudentDetails {
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
