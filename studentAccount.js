@@ -1,8 +1,3 @@
-const edit = document.getElementById("edit");
-const img = document.getElementById("img");
-img.addEventListener('mouseover', () => {
-    edit.classList.toggle('hidden')
-});
 document.addEventListener('DOMContentLoaded', () => {
     const applyBtn = document.querySelector('.apply');
     const firstNameInput = document.querySelector('input[placeholder="First name"]');
@@ -11,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneInput = document.querySelector('input[type="tel"]');
   
     // الفقرات اللي فوق عشان نحدثها
-    const doctorDetailsParagraphs = document.querySelectorAll('.doctorDetails p');
+    const studentDetailsParagraphs = document.querySelectorAll('.studentDetails p');
   
     applyBtn.addEventListener('click', (e) => {
       e.preventDefault(); // عشان ما يعيدش تحميل الصفحة لو الزر داخل فورم
@@ -28,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   
       // تحديث النصوص
-      doctorDetailsParagraphs[0].textContent = firstName + ' ' + lastName; // الاسم كامل
-      doctorDetailsParagraphs[1].textContent = 'doctor'; // ثابت (لو تحبي تخليه قابل للتعديل ممكن تضيفي حقل)
-      doctorDetailsParagraphs[2].textContent = email;
-      doctorDetailsParagraphs[3].textContent = phone;
+      studentDetailsParagraphs[0].textContent = firstName + ' ' + lastName; // الاسم كامل
+      studentDetailsParagraphs[1].textContent = 'Student'; // ثابت (لو تحبي تخليه قابل للتعديل ممكن تضيفي حقل)
+      studentDetailsParagraphs[2].textContent = email;
+      studentDetailsParagraphs[3].textContent = phone;
   
       alert('تم تحديث البيانات بنجاح!');
     });
